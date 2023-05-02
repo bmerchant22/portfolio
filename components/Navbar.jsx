@@ -5,13 +5,33 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 // import { useRouter } from 'next/router';
-import NavLogo from '../public/assets/navLogo.png'
+import NavLogo from '../public/assets/BM.jpg'
+// import Resume from '../public/Resume.pdf'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState('#ecf0f3');
   const [linkColor, setLinkColor] = useState('#1f2937');
+
+  // axios.get("/resume",
+  // {
+  //     responseType: 'arraybuffer',
+  //     headers: {
+  //         'Content-Type': 'application/json',
+  //         'Accept': 'application/pdf'
+  //     }
+  // })
+  // .then((response) => {
+  //     const url = window.URL.createObjectURL(new Blob([response.data]));
+  //     const link = document.createElement('a');
+  //     link.href = url;
+  //     link.setAttribute('download', {Resume}); //or any other extension
+  //     document.body.appendChild(link);
+  //     link.click();
+  // })
+  // .catch((error) => console.log(error));
+
   // const [position, setPosition] = useState('fixed')
   // const router = useRouter();
 
@@ -81,7 +101,7 @@ const Navbar = () => {
               <Link href='/#projects'>Projects</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/resume'>Resume</Link>
+              <a href='/resume' >Resume</a>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#contact'>Contact</Link>
